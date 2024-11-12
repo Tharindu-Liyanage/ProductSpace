@@ -23,7 +23,8 @@ namespace ProductSpace.Services
             var product = new Product
             {
                 Name = request.Name,
-               
+                Description = request.Description
+
             };
 
             _context.Add(product);
