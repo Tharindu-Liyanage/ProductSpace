@@ -8,11 +8,11 @@ using ProductSpace.Models;
 
 #nullable disable
 
-namespace ProductSpace.Migrations
+namespace ProductSpace.Migrations.AppDb
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241112075910_initial")]
-    partial class initial
+    [Migration("20241118062901_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,20 +47,6 @@ namespace ProductSpace.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("ProductSpace.Models.Tenant", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tenants");
                 });
 #pragma warning restore 612, 618
         }

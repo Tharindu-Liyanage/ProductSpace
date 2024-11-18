@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace ProductSpace.Migrations
+namespace ProductSpace.Migrations.AppDb
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,18 +24,6 @@ namespace ProductSpace.Migrations
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Tenants",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Tenants", x => x.Id);
-                });
         }
 
         /// <inheritdoc />
@@ -43,9 +31,6 @@ namespace ProductSpace.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Products");
-
-            migrationBuilder.DropTable(
-                name: "Tenants");
         }
     }
 }

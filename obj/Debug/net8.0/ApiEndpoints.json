@@ -40,5 +40,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProductSpace.Controllers.TenantController",
+    "Method": "Post",
+    "RelativePath": "api/Tenant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requsest",
+        "Type": "ProductSpace.Services.TenantService.DTOs.CreateTenantRequsest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

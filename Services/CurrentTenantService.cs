@@ -14,6 +14,7 @@ namespace ProductSpace.Services
         }
 
         public string? TenantId { get; set; }
+        public string? ConnectionString { get; set; }
 
         public async Task<bool> SetTenant(string tenant)
         {
@@ -26,7 +27,8 @@ namespace ProductSpace.Services
             else
             {
             TenantId = tenantEntity.Id;
-            return true;
+                ConnectionString = tenantEntity.ConnectionString;
+                return true;
 
             }
         }
